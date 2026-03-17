@@ -1,14 +1,20 @@
 * {
     box-sizing: border-box;
 }
+
 body {
-    
     background-color: rgb(216, 216, 216);
 }
+.swiper {
+    width: 100%;
+    overflow: hidden;
+}
+
 .up-text {
     color: gray;
     padding: 1rem;
 }
+
 .dropdown {
     display: flex;
     align-items: center;
@@ -20,8 +26,8 @@ body {
     height: 40px;
     background: transparent;
     font-size: 180%;
-    
 }
+
 .logo-button {
     display: flex;
     width: 240px;
@@ -37,52 +43,66 @@ body {
     flex: 0 0 auto;
     margin: 0;
 }
+
 .lenovo-image {
     width: 120px;
     height: 50px;
 }
+
 .samsung-image {
     width: 116px;
     height: 39px;
 }
+
 .apple-image {
     width: 44px;
     height: 44px;
 }
+
 .view-image {
     width: 128px;
     height: 21px;
 }
+
 .hp-image {
     width: 52px;
     height: 52px;
 }
+
 .acer-image {
     width: 94px;
     height: 24px;
 }
+
 .sony-image {
     width: 128px;
     height: 26px;
 }
+
 button {
     cursor: pointer;
 }
+
 .dropdown:hover {
     transform: translate(3px);
     transition: 0.3s;
 }
-.main {
+
+/* .main {
     width: 320px;
     height: 234px;
-}
+} */
+
 .swiper-wrapper {
-   display: flex;
-    gap: 0;
-   flex-direction: row;
-    padding-left:  1rem;
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+    padding-left: 1rem;
     margin: 0;
     padding-bottom: 2rem;
+    /* width: 512px;
+    height: 196px; */
+    
 }
 
 .brand-image {
@@ -91,135 +111,190 @@ button {
     flex-wrap: nowrap;
     scroll-behavior: smooth;
 }
+
 .brand-image::-webkit-scrollbar {
     display: none;
 }
 
- .button-show-hide {
-        background: none;
-        border: none;
-        display: flex;
-        align-items: center;
-        padding: 1rem 0.7rem;
-        font-size: 90%;
-        gap: 0.3rem;
-        opacity: 0;  
- }
- .show-more-img {
+.button-show-hide {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    padding: 1rem 0.7rem;
+    font-size: 90%;
+    gap: 0.3rem;
+    opacity: 0;
+}
+
+.show-more-img {
     width: 24px;
     height: 24px;
- }
- 
- .button-show-hide2 {
-    opacity: 0;
+}
+
+/* .button-show-hide2 {
     background: none;
-        border: none;
-        display: flex;
-        align-items: center;
-        padding: 1rem 1rem;
-        font-size: 90%;
-        gap: 0.3rem;
-        opacity: 0;  
-        position: relative;
-        bottom: 20%;
- }
- .hidden2 {
+    border: none;
+    display: flex;
+    align-items: center;
+    padding: 1rem 1rem;
+    font-size: 90%;
+    gap: 0.3rem;
+    opacity: 0;
+    position: relative;
+    bottom: 20%;
+} */
+/* .swiper {
+    overflow-x: auto;
+} */
+
+.hidden2 {
     display: none;
- }
+}
+ .swiper {
+    width: 100%;
+    overflow: hidden; 
+     padding-right: 10px;
+} 
+.swiper-slide {
+    width: 240px;
+    flex-shrink: 0;
+}
+.brand-image {
+    width: 240px;
+}
 .swiper-pagination {
     margin-top: 10%;
-   position:absolute;
-   top: 10%;
+    position: absolute;
+    top: 10%;
 }
 
 .swiper-pagination-bullet {
-   
     background: #b5b6bc;
     opacity: 1;
     margin-top: 10%;
-
-    
-   
 }
+
 .swiper-pagination-bullet-active {
     background: #575556;
 }
-.swiper-slide-next{
+
+/* .swiper-slide-next {
     opacity: 0.4;
     transition: opacity 0.3s;
-}
-.swiper-slide-active {
-    opacity: 1;
-}
- 
+} */
 
-@media (min-width:768px ) and (max-width:1120px){
-   html, body {
-    height: 100%;
-    margin: 0;
-   }
+/* .swiper-slide-active {
+    opacity: 1;
+} */
+
+
+@media (min-width:768px) {
+
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+    }
+
     body {
         min-height: 100hv;
         margin: 0;
-        display: flex;
     }
-    .brands {
+
+    .swiper {
+        width: 100% !important;
+        overflow: visible !important;
+        height: auto !important;
+    }
+
+    .swiper-wrapper {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 15px;
+        row-gap: 15px;
     }
+
+    .swiper-slide {
+        opacity: 1 !important;
+        margin-bottom: 0;
+    }
+
     .button2 {
         grid-row: 3;
     }
+
     .hidden {
         display: none !important;
     }
-    .scrollbar {
-        display: none;
-    }
+
     .button-show-hide {
         padding-left: 1rem;
         opacity: 1;
-        z-index: 1;
+        position: relative;
+        bottom: 10%;
     }
-    .button-show-hide2 {
+
+    /* .button-show-hide2 {
+        display: none;
+    } */
+
+    .swiper-pagination {
         display: none;
     }
-    .swiper-pagination, .swiper-scrollbar {
+
+    .button3 {
         display: none;
     }
 }
+
 @media (min-width:1121px) {
-    html,body {
-        width: 100%;
-        margin: 0;
+
+    .button-show-hide {
+      opacity: 1 !important;
+      /* position: relative;
+      top: 40%; */
     }
-    .hidden {
-        display: none !important;
-    }
-    body {
-        min-height: 100hv;
-        margin: 0;
-        display: flex;
-    }
-    .button2 {
-        display: block !important;
-    }
-    .brands {
+
+    /* .hidden2 {
+        display: none;
+    } */
+
+    /* .swiper {
+        overflow: visible;
+    } */
+
+
+    .swiper-wrapper {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        gap: 15px;
+        row-gap: 15px;
+        margin-bottom: 0;
     }
-    .button-show-hide2 {
+.button2{
+    grid-row: 2;
+}
+    .swiper-slide {
         opacity: 1;
     }
+
+    .button-show-hide {
+        display: flex;
+        position: relative;
+        bottom: 40%;
+        
+    }
+
     .button3 {
         grid-row: 3;
     }
-    .swiper-pagination, .swiper-scrollbar {
+    .hidden {
+    display: grid !important;
+}
+.hidden2 {
+    display: none !important;
+}
+
+    .swiper-pagination {
         display: none;
     }
 }
-
-
-
